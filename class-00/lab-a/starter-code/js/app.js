@@ -37,7 +37,7 @@ function displayPics() {
   }
   console.log(rando);
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
-  // PUT YOUR RESPONSE IN THIS COMMENT "because it doesnt recognize the viewed array"
+  // PUT YOUR RESPONSE IN THIS COMMENT "because it doesnt recognize the viewed array but var has global scope so it does recognize it"
   console.log(viewed);
 
   for (let i = 0; i < 3; i++) {
@@ -62,7 +62,7 @@ function handleClick(event) {
   for (let i = 0; i < names.length; i++) {
     if (event.target.id === allProducts[i].name) {
       allProducts[i].votes += 1;
-      console.log(event.target.id + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views');
+      console.log(`${event.target.id} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`);
     }
   }
   localStorage.busmall = JSON.stringify(allProducts);
@@ -73,7 +73,7 @@ function handleClick(event) {
 function showList() {
   for (let i = 0; i < allProducts.length; i++) {
     const liEl = document.createElement('li');
-    liEl.textContent = allProducts[i].name + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views';
+    liEl.textContent = `${allProducts[i].name} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`;
     list.appendChild(liEl);
   }
 }
