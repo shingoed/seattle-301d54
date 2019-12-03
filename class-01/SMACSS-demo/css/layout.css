@@ -1,20 +1,159 @@
-/* positions, structure, width, height*/
 body{
-  margin: auto;
-  width: 500px;
+   display: inline-block;
 }
 
-div{
-  background-color: green;
-  width: 250px;
-  height: 450px;
+
+
+/* ************************************small screen********************************** */
+@media only screen and (max-width:768px){
+
+  #big-box 
+{
   margin: 20px;
-  overflow: scroll;
+  width: 768px;
+} 
+
+  #box-a {
+    background-color: red;
+    width: 480px;
+    height: 75px;
+    clear: both;   
+  }
+  
+  #box-b {
+    background-color: yellow;
+    width: 480px;
+    height: 150px;
+    clear: both;   
+  }
+  
+  #box-c {
+    background-color: green;
+    width: 480px;
+    height: 125px;
+    clear: both;   
+  }
+  
+  #box-d {
+    background-color: blue;
+    width: 480px;
+    height: 125px;
+    clear: both;   
+  }
+  
+  #box-e {
+    background-color: lightblue;
+    width: 240px;
+    height: 250px;
+    float: left;
+  }
+  
+  #box-f {
+    background-color: lightcoral;
+    width: 240px;
+    height: 250px;
+    float: left;
+  }
+  
+  #box-g {
+    background-color: lightcyan;
+    width: 240px;
+    height: 250px;
+    float: right;
+  }
+  
+  #box-h {
+    background-color: lightpink;
+    width: 240px;
+    height: 250px;
+    float: left;
+
+  }
+  
+  #box-i {
+    background-color: orange;
+    width: 480px;
+    height: 80px;
+    clear: both;   
+ 
+  
+  }
+  
+  }
+
+/****************************************** DESKTOP VIEWPORT *****************************************/
+@media only screen and (min-width:768px){
+
+  #big-box 
+{
+  margin: 20px;
+  width: 960px;
+} 
+
+#box-a {
+  background-color: red;
+  width: 960px;
+  height: 100px;
 }
 
-@media only screen and (min-width:500px){
-  div{
-    display: inline-block;
-    background-color: lightblue;
-  }
+#box-b {
+  background-color: yellow;
+  width: 200px;
+  height: 600px;
+  float: left;
+}
+
+#box-c {
+  background-color: green;
+  width: 380px;
+  height: 200px;
+  float: left;
+}
+
+#box-d {
+  background-color: blue;
+  width: 380px;
+  height: 200px;
+  float: right
+}
+
+#box-e {
+  background-color: lightblue;
+  width: 190px;
+  height: 250px;
+  float: right
+}
+
+#box-f {
+  background-color: lightcoral;
+  width: 190px;
+  height: 250px;
+  float: right
+}
+
+
+#box-g {
+  background-color: lightcyan;
+  width: 190px;
+  height: 250px;
+  float: right
+
+}
+
+#box-h {
+  background-color: lightpink;
+  width: 190px;
+  height: 250px;
+  float: right
+
+}
+
+#box-i {
+  background-color: orange;
+  width: 760px;
+  height: 150px;
+  clear: right;   
+  float: right;
+}
+
 }
