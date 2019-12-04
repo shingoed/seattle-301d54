@@ -6,7 +6,7 @@ Start time: 9:45am
 
 Finish time: 10:05am
 
-Actual time needed to complete:
+Actual time needed to complete: 35min
 
 
 
@@ -14,9 +14,9 @@ Number and name of feature: Feature #2: Filter images
 
 Estimate of time needed to complete: 1hr
 
-Start time: 10:10am
+Start time: 10:20am
 
-Finish time: 11:10am
+Finish time: 11:20am
 
 Actual time needed to complete:
 
