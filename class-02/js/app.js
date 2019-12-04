@@ -22,9 +22,53 @@ Horn.prototype.render = function () {
   $('main').append($newSection)
 }
 
+renderSelection = function () {
+  const $newSelector = $('<select></select>')
+  const keywordArray = []
+  for (let i = 0; i < hornArray.length; i++) {
+    if (!keywordArray.includes(hornArray[i].keyword)) {
+      keywordArray.push(hornArray[i].keyword)
+      let newOption = new Option(hornArray[i].keyword, hornArray[i].title)
+      $newSelector.append(newOption)
+    }
+  }
+  $newSelector.on('change', function () {
+    let keyword = this.value.toLowerCase()
+    console.log('keyword', keyword)
+    for (let i = 2; i < hornArray.length + 2; i++) {
+      let nthSection = 'section:nth-of-type(' + i + ')'
+      console.log('nthSection', $(nthSection).find('h2').text().toString())
+      console.log('keyword', keyword.toString())
+      console.log($(nthSection).find('h2').text().toString() === keyword.toString())
+
+      if ($(nthSection).find('h2').text().toString() === keyword.toString()) {
+        $(nthSection).show()
+
+      } else {
+        $(nthSection).hide()
+      }
+    }
+
+    // for (let i = 2; i < hornArray.length + 2; i++) {
+    //   let nthSection = 'section:nth-of-type(' + i + ')'
+    //   console.log($(nthSection).find('h2').text().toString() === keyword.toString())
+    //   if ($(nthSection).find('h2').text().toString() === keyword.toString()) {
+    //     $(nthSection).show()
+
+    //   }
+    //   $(nthSection).hide()
+    // }
+
+    console.log(this.value)
+  })
+
+  $('header').append($newSelector)
+}
+
 $.get('/data/page-1.json', data => {
   data.forEach(horn => {
     new Horn(horn).render()
   });
+  renderSelection()
 })
 
