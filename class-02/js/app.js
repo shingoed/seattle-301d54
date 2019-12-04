@@ -1,3 +1,6 @@
+// let firstSection = 'section:nth-of-type(0)'
+// $(nthSection).hide()
+
 const hornArray = []
 
 function Horn(hornObj) {
