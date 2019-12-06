@@ -28,19 +28,35 @@ function makeRandom() {
   return Math.floor(Math.random() * names.length);
 }
 
+<<<<<<< HEAD
+function displayPics() {
+  while (viewed.length < 6) {
+    const rando = makeRandom();
+    while (!viewed.includes(rando)) {
+=======
 function displayPics() {
   while (viewed.length < 6) {
     var rando = makeRandom();
     while (!viewed.includes(rando)) {
+>>>>>>> a4c2f1eaa7b83322690962de66897fc3bc3049a8
       viewed.push(rando);
     }
+    console.log(rando);
   }
+<<<<<<< HEAD
+  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
+  // PUT YOUR RESPONSE IN THIS COMMENT
+  console.log(viewed);
+
+  for (let i = 0; i < 3; i++) {
+=======
   console.log(rando);
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
   // PUT YOUR RESPONSE IN THIS COMMENT "because it doesnt recognize the viewed array but var has global scope so it does recognize it"
   console.log(viewed);
 
   for (let i = 0; i < 3; i++) {
+>>>>>>> a4c2f1eaa7b83322690962de66897fc3bc3049a8
     const temp = viewed.shift();
     pics[i].src = allProducts[temp].path;
     pics[i].id = allProducts[temp].name;
